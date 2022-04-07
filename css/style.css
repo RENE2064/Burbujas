@@ -1,0 +1,168 @@
+/*Globales*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3 {
+  margin: 1rem 0 0 0;
+}
+h1 {
+  font-size: 3.4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/*Utilidades*/
+[class$="__container"] {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Titulo y Navegacion */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: linear-gradient(to right, #005c98, #505bda);
+}
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  color: #fff;
+}
+.header__lista {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Sub Titulo e Imagen */
+
+.header__subTitle {
+  font-size: 6rem;
+  color: #fff;
+}
+
+/* Burbujas */
+
+.burbuja {
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.3;
+  position: absolute;
+  bottom: -150;
+  animation: burbujas 3s linear infinite;
+}
+.burbuja:nth-child(1) {
+  width: 8rem;
+  height: 8rem;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+.burbuja:nth-child(2) {
+  width: 10rem;
+  height: 10rem;
+  left: 30%;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+.burbuja:nth-child(3) {
+  width: 8rem;
+  height: 8rem;
+  left: 23%;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+.burbuja:nth-child(4) {
+  width: 5rem;
+  height: 5rem;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+.burbuja:nth-child(5) {
+  width: 2rem;
+  height: 2rem;
+  left: 20%;
+  animation-duration: 1.5s;
+  animation-delay: 7s;
+}
+.burbuja:nth-child(6) {
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  animation-duration: 4s;
+  animation-delay: 5s;
+}
+.burbuja:nth-child(7) {
+  width: 8rem;
+  height: 8rem;
+  left: 70%;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+
+@keyframes burbujas {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(30px);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Imagen */
+
+.header__imagen {
+  animation: movimiento 2.5s linear infinite;
+}
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
