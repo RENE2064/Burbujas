@@ -49,13 +49,28 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100vh;
+  height: 120vh;
   background: linear-gradient(to right, #005c98, #505bda);
 }
+@media (min-width: 768px) {
+  .header {
+    height: 100vh;
+  }
+}
+
 .header__flex {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .header__flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .header__title {
   color: #fff;
@@ -72,6 +87,12 @@ a {
 .header__subTitle {
   font-size: 6rem;
   color: #fff;
+}
+.header__llamanos {
+  width: 30rem;
+  padding: 2rem;
+  background: #1a2849;
+  line-height: 5;
 }
 
 /* Burbujas */
